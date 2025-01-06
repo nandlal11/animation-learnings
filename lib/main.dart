@@ -1,5 +1,6 @@
 import 'package:animation_demo/provider/tween_anim_provider.dart';
-import 'package:animation_demo/tween_anim.dart';
+import 'package:animation_demo/pages/tween_anim.dart';
+import 'package:animation_demo/routes/routes_config.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,13 +18,14 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => TweenAnimProvider())
       ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
+      child: MaterialApp.router(
+        title: 'Animation Demo',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const TweenAnim(),
+        routerConfig: AppRoutes.router,
       ),
     );
   }
