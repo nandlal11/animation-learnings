@@ -1,0 +1,33 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "animation-demo-49cad",
+          "appId": "1:537116962275:android:2d829b832093ac156004d6",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "animation-demo-49cad",
+          "configurations": {
+            "android": "1:537116962275:android:2d829b832093ac156004d6",
+            "ios": "1:537116962275:ios:b929b9afe620b4c96004d6",
+            "macos": "1:537116962275:ios:b929b9afe620b4c96004d6",
+            "web": "1:537116962275:web:22f7623e9eee39c96004d6",
+            "windows": "1:537116962275:web:cb47f52cda07991c6004d6"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

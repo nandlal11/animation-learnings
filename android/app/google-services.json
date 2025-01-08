@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "537116962275",
+    "project_id": "animation-demo-49cad",
+    "storage_bucket": "animation-demo-49cad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537116962275:android:2d829b832093ac156004d6",
+        "android_client_info": {
+          "package_name": "com.anim.animation_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx3L460Yvq91ToxOuzEazxuAxehBX7wxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

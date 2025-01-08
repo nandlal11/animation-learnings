@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.anim.animation_demo",
+      "sha256_cert_fingerprints": [
+        "4E:31:78:4B:57:46:43:52:19:08:C7:BD:40:96:C0:EF:9D:6E:FA:01:64:DF:04:79:5C:6F:B5:90:65:AC:D2:F4"
+      ]
+    }
+  }
+]
