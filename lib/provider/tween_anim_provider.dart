@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TweenAnimProvider extends ChangeNotifier {
-  double opacity = 1;
+  double _opacity = 1;
 
-  setOpacity(double value) {
-    opacity = value;
+  double get opacity => _opacity;
+
+  set setOpacity(double value) {
+    _opacity = value;
     notifyListeners();
   }
 }

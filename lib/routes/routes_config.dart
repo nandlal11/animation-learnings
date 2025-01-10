@@ -1,8 +1,10 @@
 import 'package:animation_demo/models/user_model.dart';
 import 'package:animation_demo/pages/error.dart';
+import 'package:animation_demo/pages/hero_anim.dart';
 import 'package:animation_demo/pages/home.dart';
 import 'package:animation_demo/pages/tween_anim.dart';
 import 'package:animation_demo/routes/routes_contants.dart';
+import 'package:animation_demo/utils/global_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,6 +12,7 @@ class AppRoutes {
   static GoRouter getRouter({bool isAuth = false}) {
     GoRouter router = GoRouter(
         initialLocation: "/",
+        navigatorKey: GlobalData.navigatorKey,
         routes: [
           GoRoute(
               name: AppRoutesConstants.homeRoute,
@@ -28,6 +31,12 @@ class AppRoutes {
                   userName: state.pathParameters["username"]!,
                   userModel: arg["user_model"]!,
                 ));
+              }),
+          GoRoute(
+              name: AppRoutesConstants.heroAnimRoute,
+              path: "/hero_anim",
+              pageBuilder: (context, state) {
+                return const MaterialPage(child: HeroAnim());
               })
         ],
         redirect: (context, state) {

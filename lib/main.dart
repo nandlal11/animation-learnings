@@ -1,6 +1,8 @@
+import 'package:animation_demo/provider/hero_anim_provider.dart';
 import 'package:animation_demo/provider/tween_anim_provider.dart';
 import 'package:animation_demo/pages/tween_anim.dart';
 import 'package:animation_demo/routes/routes_config.dart';
+import 'package:animation_demo/utils/global_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => TweenAnimProvider())
+        ChangeNotifierProvider(create: (context) => TweenAnimProvider()),
+        ChangeNotifierProvider(create: (context) => HeroAnimProvider())
       ],
       child: MaterialApp.router(
         title: 'Animation Demo',
