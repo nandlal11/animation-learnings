@@ -51,30 +51,28 @@ class _HeroAnimState extends State<HeroAnim>
       appBar: AppBar(
         title: Text("Hero Animation"),
       ),
-      body: Column(
-        children: [
-          Hero(
-              tag: "shiv",
-              transitionOnUserGestures: true,
-              child: Image.asset("assets/images/shiv.jpeg")),
-          ListTile(
-            title: Text("Kedarnath"),
-            subtitle: Text("Shiva Temple"),
-            trailing: AnimatedBuilder(
-                animation: _controller,
-                builder: (context, _) => IconButton(
-                      icon: Icon(Icons.favorite,
-                          size: _sizeAnimation.value,
-                          color: _colorAnimation.value),
-                      onPressed: () {
-                        _provider.isFav
-                            ? _controller.reverse()
-                            : _controller.forward();
-                      },
-                    )),
-          )
-        ],
-      ),
+      body: Column(children: [
+        Hero(
+            tag: "shiv",
+            transitionOnUserGestures: true,
+            child: Image.asset("assets/images/shiv.jpeg")),
+        ListTile(
+          title: Text("Kedarnath"),
+          subtitle: Text("Shiva Temple"),
+          trailing: AnimatedBuilder(
+              animation: _controller,
+              builder: (context, _) => IconButton(
+                    icon: Icon(Icons.favorite,
+                        size: _sizeAnimation.value,
+                        color: _colorAnimation.value),
+                    onPressed: () {
+                      _provider.isFav
+                          ? _controller.reverse()
+                          : _controller.forward();
+                    },
+                  )),
+        )
+      ]),
     );
   }
 }

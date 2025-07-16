@@ -26,7 +26,7 @@ class TweenAnimPage extends StatelessWidget {
             "Tween Animation",
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0),
           ),
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           tween: Tween<double>(begin: 0, end: 1),
           builder: (context, value, child) {
             return Opacity(opacity: value, child: child);

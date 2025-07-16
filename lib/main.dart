@@ -1,3 +1,4 @@
+import 'package:animation_demo/provider/card_provider.dart';
 import 'package:animation_demo/provider/hero_anim_provider.dart';
 import 'package:animation_demo/provider/tween_anim_provider.dart';
 import 'package:animation_demo/pages/tween_anim.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => TweenAnimProvider()),
-        ChangeNotifierProvider(create: (context) => HeroAnimProvider())
+        ChangeNotifierProvider(create: (context) => HeroAnimProvider()),
+        ChangeNotifierProvider(create: (context) => CardProvider())
       ],
       child: MaterialApp.router(
         title: 'Animation Demo',

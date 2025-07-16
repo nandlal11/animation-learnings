@@ -1,7 +1,10 @@
 import 'package:animation_demo/models/user_model.dart';
+import 'package:animation_demo/pages/container_anim.dart';
 import 'package:animation_demo/pages/error.dart';
 import 'package:animation_demo/pages/hero_anim.dart';
 import 'package:animation_demo/pages/home.dart';
+import 'package:animation_demo/pages/rotate_image_anim.dart';
+import 'package:animation_demo/pages/swipe_cards.dart';
 import 'package:animation_demo/pages/tween_anim.dart';
 import 'package:animation_demo/routes/routes_contants.dart';
 import 'package:animation_demo/utils/global_data.dart';
@@ -35,9 +38,23 @@ class AppRoutes {
           GoRoute(
               name: AppRoutesConstants.heroAnimRoute,
               path: "/hero_anim",
-              pageBuilder: (context, state) {
-                return const MaterialPage(child: HeroAnim());
-              })
+              pageBuilder: (context, state) =>
+                  const MaterialPage(child: HeroAnim())),
+          GoRoute(
+              name: AppRoutesConstants.containerAnimRoute,
+              path: "/container_anim",
+              pageBuilder: (context, state) =>
+                  const MaterialPage(child: ContainerAnim())),
+          GoRoute(
+              name: AppRoutesConstants.tinderCardRoute,
+              path: "/${AppRoutesConstants.tinderCardRoute}",
+              pageBuilder: (context, state) =>
+                  const MaterialPage(child: SwipeCards())),
+          GoRoute(
+              name: AppRoutesConstants.rotateImageRoute,
+              path: "/${AppRoutesConstants.rotateImageRoute}",
+              pageBuilder: (context, state) =>
+                  const MaterialPage(child: RotateImageAnim()))
         ],
         redirect: (context, state) {
           if (!isAuth &&
